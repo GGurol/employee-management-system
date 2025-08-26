@@ -11,7 +11,7 @@
 
 6-create .env file based on docker yml file.
 
-7-docker compose up --build
+7-"""docker compose up --build"""
 
 8-missing composer and components:
 
