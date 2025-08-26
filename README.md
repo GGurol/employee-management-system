@@ -32,23 +32,23 @@
 ----http://localhost:8082---
     
     
-11-fix missing route for "admin/" path on routes/web.php
+11-fix missing route for "admin/" path on routes/web.php : *** fixed
 
 12-run migrate and seeder:
 
     ```docker compose exec app php artisan migrate``` or
     ```docker compose exec app php artisan migrate:fresh```
-        -it will give multiple errors. Reason: migrate files probable created manually, datatypes and order of files are wrong.fixed
+        -it will give multiple errors. Reason: migrate files probable created manually, datatypes and order of files are wrong. ***fixed
     
     //fill the tables
     ```docker compose exec app php artisan migrate:fresh --seed```
-        -it will give multiple error. Reason: DatabaseSeeder.php has missing entires. Also seeder files missing too. fixed.
+        -it will give multiple error. Reason: DatabaseSeeder.php has missing entires. Also seeder files missing too. ***fixed.
         
         
     *** if you get seeding errors;
         ```docker compose exec app composer dump-autoload```
         ```docker compose exec app php artisan migrate:fresh --seed```
         
-13-now you can login with seeded admin info. ( database/seeds/AdminTableSeeder.php )
+13-now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )
 
 14-login into http://localhost:8082
