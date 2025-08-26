@@ -22,6 +22,8 @@
 
     ```sudo chown -R {your_username}:{your_username} .```
     ```sudo chown -R www-data:www-data src/storage src/bootstrap/cache```
+    ```docker compose exec app php artisan storage:link``` ### fixes new admin/profile picture upload 
+    
     
     
 10-new key generate for .env file:
