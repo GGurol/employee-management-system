@@ -1,4 +1,5 @@
 1-downlaod repo from https://github.com/sahabuddin123/Employee-Management-System-v2
+( or fixed version of it from here)
 2-create a docker file/folder system.
 3-move downloaded repo files into src/ folder on your docker filesystem
 4-create docker-compose.yml file
@@ -40,8 +41,3 @@
         
 13-now you can login with seeded admin info. ( database/seeds/AdminTableSeeder.php )
 14-login into http://localhost:8082
-        
-        
-      
-    
-
