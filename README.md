@@ -11,24 +11,22 @@
 
 6-create .env file based on docker yml file.
 
-7-```bash
-    docker compose up --build
-    ```
+7-```docker compose up --build```
 
 8-missing composer and components:
 
-    delete composer.lock file
-    docker compose exec app composer install
+    ```rm -rf composer.lock``` #delete composer.lock file 
+    ```docker compose exec app composer install```
     
 9-persmission and ownership commands:
 
-    sudo chown -R {your_username}:{your_username} .
-    sudo chown -R www-data:www-data src/storage src/bootstrap/cache
+    ```sudo chown -R {your_username}:{your_username} .```
+    ```sudo chown -R www-data:www-data src/storage src/bootstrap/cache```
     
     
 10-new key generate for .env file:
 
-    docker compose exec app php artisan key:generate
+    ```docker compose exec app php artisan key:generate```
     
     
 ----http://localhost:8082---
@@ -38,18 +36,18 @@
 
 12-run migrate and seeder:
 
-    docker compose exec app php artisan migrate or
-    docker compose exec app php artisan migrate:fresh
+    ```docker compose exec app php artisan migrate``` or
+    ```docker compose exec app php artisan migrate:fresh```
         -it will give multiple errors. Reason: migrate files probable created manually, datatypes and order of files are wrong.fixed
     
     //fill the tables
-    docker compose exec app php artisan migrate:fresh --seed
+    ```docker compose exec app php artisan migrate:fresh --seed```
         -it will give multiple error. Reason: DatabaseSeeder.php has missing entires. Also seeder files missing too. fixed.
         
         
     *** if you get seeding errors;
-        -docker compose exec app composer dump-autoload
-        -docker compose exec app php artisan migrate:fresh --seed
+        ```docker compose exec app composer dump-autoload```
+        ```docker compose exec app php artisan migrate:fresh --seed```
         
 13-now you can login with seeded admin info. ( database/seeds/AdminTableSeeder.php )
 
