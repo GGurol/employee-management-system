@@ -20,7 +20,7 @@
     
 9-persmission and ownership commands:
 
-    sudo chown -R guney:guney .
+    sudo chown -R {your_username}:{your_username} .
     sudo chown -R www-data:www-data src/storage src/bootstrap/cache
     
     
