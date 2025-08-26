@@ -5,11 +5,11 @@
 
 3-move downloaded repo files into src/ folder on your docker filesystem
 
-4-create docker-compose.yml file
+4-create docker-compose.yml file ( copy the content of https://github.com/GGurol/employee-management-system/blob/main/docker-compose.yml )
 
-5-create Dockerfile for php extensions for laravel6
+5-create Dockerfile for php extensions for laravel6 ( copy the content of https://github.com/GGurol/employee-management-system/blob/main/Dockerfile )
 
-6-create .env file based on docker yml file.
+6-create .env file based on docker yml file. ( copy the content of  https://github.com/GGurol/employee-management-system/blob/main/src/.env ) 
 
 7-```docker compose up --build```
 
