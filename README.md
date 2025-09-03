@@ -1,5 +1,14 @@
 ### Employe Manegement System ###
 
+### Base System :
+```
+PHP -v7.4
+MySQL -v8.0
+Laravel Framework 6.20.45
+```
+
+### CLONE & INSTALL THE SYSTEM
+
 #Clone The Repository:
 ```
 git clone https://github.com/GGurol/employee-management-system.git
@@ -53,6 +62,8 @@ http://localhost:8082
 
 #Login:
     now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )
+    email : sahabuddinriyaj984@gmail.com
+    pass : 1032000
 
     
     
