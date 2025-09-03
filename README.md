@@ -67,14 +67,8 @@ http://localhost:8082
 #Login:
     now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )  
 
-    login/email :   
-    ```
-    sahabuddinriyaj984@gmail.com
-    ```
-    password :  
-    ```
-    1032000
-    ```
+    login/email :   sahabuddinriyaj984@gmail.com  
+    password :  1032000
 
     
     
