@@ -8,13 +8,13 @@ cd employee-management-system
 
 #Delete composer contents
 ```
-rm -rf composer.lock``` #delete composer.lock file
+rm -rf composer.lock
 ```
 
 #Permission and Ownership Laravel Spesific File/Folders
 ```
 sudo chown -R {your_username}:{your_username} .
-sudo chown -R www-data:www-data src/storage src/bootstrap/cache`
+sudo chown -R www-data:www-data src/storage src/bootstrap/cache
 ```
 
 #Docker:
