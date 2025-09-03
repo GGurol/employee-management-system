@@ -35,6 +35,9 @@ docker compose exec app php artisan key:generate
 #Database Migrations:
 ```
 docker compose exec app php artisan migrate:fresh
+```
+or better to use:
+```
 docker compose exec app php artisan migrate:fresh --seed
 ```
     *** if you get seeding errors;
