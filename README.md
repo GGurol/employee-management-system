@@ -12,6 +12,8 @@ Laravel Framework 6.20.45
 #Clone The Repository:
 ```
 git clone https://github.com/GGurol/employee-management-system.git
+```
+```
 cd employee-management-system
 ```
 
@@ -23,6 +25,8 @@ rm -rf composer.lock
 #Permission and Ownership Laravel Spesific File/Folders
 ```
 sudo chown -R {your_username}:{your_username} .
+```
+```
 sudo chown -R www-data:www-data src/storage src/bootstrap/cache
 ```
 
@@ -61,9 +65,16 @@ http://localhost:8082
 ```
 
 #Login:
-    now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )
-    email : sahabuddinriyaj984@gmail.com
-    pass : 1032000
+    now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )  
+
+    login/email :   
+    ```
+    sahabuddinriyaj984@gmail.com
+    ```
+    password :  
+    ```
+    1032000
+    ```
 
     
     
