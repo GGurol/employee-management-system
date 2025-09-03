@@ -1,54 +1,55 @@
-1-downlaod repo from https://github.com/sahabuddin123/Employee-Management-System-v2
-( or fixed version of it from here)
+### Employe Manegement System ###
 
-2-create a docker file/folder system.
+#Clone The Repository:
+```
+git clone https://github.com/GGurol/employee-management-system.git
+cd employee-management-system
+```
 
-3-move downloaded repo files into src/ folder on your docker filesystem
+#Delete composer contents
+```
+rm -rf composer.lock``` #delete composer.lock file
+```
 
-4-create docker-compose.yml file ( copy the content of https://github.com/GGurol/employee-management-system/blob/main/docker-compose.yml )
+#Permission and Ownership Laravel Spesific File/Folders
+```
+sudo chown -R {your_username}:{your_username} .
+sudo chown -R www-data:www-data src/storage src/bootstrap/cache`
+```
 
-5-create Dockerfile for php extensions for laravel6 ( copy the content of https://github.com/GGurol/employee-management-system/blob/main/Dockerfile )
+#Docker:
+```
+docker compose up --build -d
+```
 
-6-create .env file based on docker yml file. ( copy the content of  https://github.com/GGurol/employee-management-system/blob/main/src/.env ) 
-
-7-```docker compose up --build```
-
-8-missing composer and components:
-
-    ```rm -rf composer.lock``` #delete composer.lock file 
-    ```docker compose exec app composer install```
+#Install Composer and components:
+```
+docker compose exec app composer install
+```
     
-9-persmission and ownership commands:
-
-    ```sudo chown -R {your_username}:{your_username} .```
-    ```sudo chown -R www-data:www-data src/storage src/bootstrap/cache```
+#Generate new key
+```
+docker compose exec app php artisan key:generate
+```
     
-    
-10-new key generate for .env file:
-
-    ```docker compose exec app php artisan key:generate```
-    
-    
-----http://localhost:8082---
-    
-    
-11-fix missing route for "admin/" path on routes/web.php : *** fixed
-
-12-run migrate and seeder:
-
-    ```docker compose exec app php artisan migrate``` or
-    ```docker compose exec app php artisan migrate:fresh```
-        -it will give multiple errors. Reason: migrate files probable created manually, datatypes and order of files are wrong. ***fixed
-    
-    //fill the tables
-    ```docker compose exec app php artisan migrate:fresh --seed```
-        -it will give multiple error. Reason: DatabaseSeeder.php has missing entires. Also seeder files missing too. ***fixed.
-        
-        
+#Database Migrations:
+```
+docker compose exec app php artisan migrate:fresh
+docker compose exec app php artisan migrate:fresh --seed
+```
     *** if you get seeding errors;
-        ```docker compose exec app composer dump-autoload```
-        ```docker compose exec app php artisan migrate:fresh --seed```
-        
-13-now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )
+    ```
+    docker compose exec app composer dump-autoload
+    docker compose exec app php artisan migrate:fresh --seed
+    ```
 
-14-login into http://localhost:8082
+#Visit:
+```
+http://localhost:8082
+```
+
+#Login:
+    now you can login with seeded admin info. ( src/database/seeds/AdminTableSeeder.php )
+
+    
+    
